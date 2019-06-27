@@ -1,9 +1,21 @@
 body {
     font-family: 'Noto Sans HK', sans-serif;
     background-color: hsl(35, 71%, 80%);
-    color: hsl(35, 71%, 80%);
+    color: rgb(7, 3, 63);
 
     /* set base font size. */
-    font-size: 15em
+    font-size: 20px;
     }
-    h1 {color: black}
+h1 {color: red;
+        font-size: 1em;
+    }
+    
+figure {
+        margin: 25px auto;
+        width:  500px;
+        text-align: left;
+            
+    }
+img {
+    max-width:100%
+}

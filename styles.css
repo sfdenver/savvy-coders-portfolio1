@@ -33,19 +33,22 @@ nav > ul {
   display: flex;
   justify-content: space-around;
   padding: 10px 0px;
+  margin: 0px 0px;
   background: whitesmoke;
+  color: grey;
 }
 
 .dropdown ul {
   justify-content: space-around;
   display: none;
   background: rgb(191, 189, 206);
+  color: grey;
   border-radius: 0 0 3px 3px;
   position: absolute;
   box-shadow: 3px 5px 5px rgb(191, 189, 206);
 }
-.dropdown: focus ul,
-.dropdown: hover ul{
+.dropdown:focus ul,
+.dropdown:hover ul{
   display: flex;
   flex-direction: column;
 }

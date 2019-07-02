@@ -16,38 +16,48 @@
 </head>
 
 <body>
-    <header>
-        <h1>Hello, world!</h1>
-        <h1>My name is Steve Field</h1>
-        <figure>
-            <img src="WIN_20190625_15_29_01_Pro.jpg" alt="local photo" />
-
-        </figure>
-
-    </header>
-
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="About/">About</a></li>
             <li><a href="Contact/">Contact</a></li>
-            <li>Portfolio</li>
-            <Ul>
-                <li>Class Showcase</li>
-                <li>Web Store Hack-A-Thon</li>
-                <li>Demo Day Project</li>
-            </Ul>
+            <li class="dropdown">
+                Portfolio
+                <ul>
+                    <li><a href="sec1">Class Showcase</a></li>
+                    <li><a href="sec2">Web Store Hack-A-Thon"</a></li>
+                    <li><a href="sec3">Demo Day Project</a></li>
+                </ul>
+            </li>
             <!--  Navigation to page sections and other pages-->
 
         </ul>
     </nav>
+
+    <header>
+
+        <!-- removing figure from displaying
+        <figure>
+        <img src="DSCF0104.JPG" alt="local photo" />
+        </figure>
+        -->
+        <div>
+            <h1>Hello, world!</h1>
+            <h1>My name is Steve Field</h1>
+        </div>
+
+    </header>
+
+
 
     <main>
         <section id="sec1">
             <h2>Example of a Section Header</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magnam numquam corporis repudiandae
                 porro tempore rerum dolores vitae dicta, reiciendis distinctio, impedit accusantium libero! Iusto
-                mollitia minus ipsam quam laborum!</p>
+                mollitia minus ipsam quam laborum!
+            </p>
+            <a href="#" class="cta-btn">Read More!</a>
 
         </section>
 
@@ -55,7 +65,10 @@
             <h2>Example of a Section Header</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magnam numquam corporis repudiandae
                 porro tempore rerum dolores vitae dicta, reiciendis distinctio, impedit accusantium libero! Iusto
-                mollitia minus ipsam quam laborum!</p>
+                mollitia minus ipsam quam laborum!
+            </p>
+            <a href="#" class="cta-btn">Read More!</a>
+
 
         </section>
 
@@ -63,16 +76,38 @@
             <h2>Example of a Section Header</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magnam numquam corporis repudiandae
                 porro tempore rerum dolores vitae dicta, reiciendis distinctio, impedit accusantium libero! Iusto
-                mollitia minus ipsam quam laborum!</p>
+                mollitia minus ipsam quam laborum!
+            </p>
+            <a href="#" class="cta-btn">Read More!</a>
 
         </section>
 
     </main>
-    <footer>
-        <a href="https://github.com/sfdenver/savvy-coders-portfolio1" target="_blank">
-            <span><i class="fab fa-github-square"></i> </span>
-        </a>
 
+    <footer>
+        <ul>
+            <li>
+                <a href="https://github.com/sfdenver/savvy-coders-portfolio1" target="_blank">
+                    <span><i class="fab fa-github-square"></i> </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/sfdenver/savvy-coders-portfolio1" target="_blank">
+                    <span><i class="fab fa-github-square"></i> </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/sfdenver/savvy-coders-portfolio1" target="_blank">
+                    <span><i class="fab fa-github-square"></i> </span>
+                </a>
+            </li>
+
+        </ul>
+        <address>
+            Steve Field <br>
+            123 St Elsewhere <br>
+            St Louis, MO 6s131 <br>
+        </address>
     </footer>
 
 

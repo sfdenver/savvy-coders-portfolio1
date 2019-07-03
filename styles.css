@@ -1,25 +1,18 @@
 body {
-  font-family: "Noto Sans HK", sans-serif;
+  /* set base background, colors, font family, font size */
   background-color: silver;
   color: gray;
-  /* set base font size. */
+  font-family: "Noto Sans HK", sans-serif;
   font-size: 20px;
 }
 h1 {
   color: goldenrod;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-figure {
-  margin: 25px auto;
-  width: 500px;
-  text-align: left;
+h2 {
+  font-size: 1.5em;
 }
-/* stock image embedded in figure  */
-img {
-  max-width: 100%;
-}
-/* Navigation section */
 
 ul {
   padding: 0;
@@ -28,51 +21,87 @@ ul {
 li {
   list-style-type: none;
 }
+
+figure {
+  margin: 25px auto;
+  width: 100vw;
+  text-align: center;
+}
+/* stock image embedded in figure  */
+img {
+  max-width: 100%;
+}
+
+section {
+  font-size:10px;
+}
+
+
+/* Navigation section */
+nav {
+  background: white;
+  padding: 10px 0;
+}
+
 nav > ul {
   display: flex;
   justify-content: space-around;
   padding: 10px 0px;
   margin: 0px 0px;
   background: whitesmoke;
-  color: grey;
+  color: darkgrey;
 }
 
 .dropdown ul {
   justify-content: space-around;
   display: none;
-  background: rgb(191, 189, 206);
-  color: grey;
+  background: whitesmoke;
+  color: darkgrey;
   border-radius: 0 0 3px 3px;
+
+  /* moves out of document flow */
   position: absolute;
-  box-shadow: 3px 5px 5px rgb(191, 189, 206);
+  box-shadow: 3px 5px 5px darkgrey;
+  padding: 8px;
 }
+
+/* Generally, 'focus' goes with 'hover' state to help with keyboard navigation and accessiblity. */
 .dropdown:focus ul,
 .dropdown:hover ul{
   display: flex;
   flex-direction: column;
 }
 
-header, header div {
+/* Hero section */
+header,
+header div {
   display: flex;
   align-items: center;
   flex-direction: column;
   background: cornsilk;
   justify-content: center;
-
 }
 
 header {
   height: 80vh;
-  background-image: url(https://picsum.photos/900/560?grayscale);
+  /*   background-image: url(https://picsum.photos/900/560?grayscale);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center;  */
+  background: url(https://picsum.photos/900/560?grayscale) no-repeat top center;
   background-size: cover;
 }
+
 header div {
-  display: flex;
-  flex-direction: column;
+  /* background is set at 50% transparency */
+  background: cornsilk 0.5;
   width: 100%;
 }
+/* attempt to convert banner to a  - not working yet
+.banner {
+  background: cornsilk 0.5;
+  width: 100vw;
+} */
+
 
 /* Main */
 main {
@@ -81,8 +110,8 @@ main {
 }
 
 main > section {
-  margin: 10px;
   background-color: cornsilk;
+  margin: 10px;
   padding: 10px;
 }
 main section h2 {
@@ -90,42 +119,52 @@ main section h2 {
   text-transform: uppercase;
 }
 
-cta-btn {
+.cta-btn {
   display: inline-block;
+  border-radius: 3px;
   background-color: slategrey;
   color: silver;
   margin: 10px;
   padding: 10px;
-  border-radius: 50%;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  /* Normally, you should specify which properties to transition. Else, it will do all the 'transition-able' things and that could slow down the page. */
   transition: : 0.25s;
 }
 
-cta-btn:focus
-cta-btn:hover {
+.cta-btn:focus,
+.cta-btn:hover {
   background-color: slategrey;
-  transform: translateY(-px);
+  transform: translateY(-3px);
 }
 
 
 /*  Footer */
+footer {
+  border-top: solid 3px slategray;
+  transform: translateY(-3px);
+  padding: 0px 20px;
+}
+
+
 footer li{
   display: inline-block;
 }
 
 /*  Contact Page form  */
 form {
-  border: solid 3px green;
+  border: solid 3px slategray;
+  color: black;
   width: 60vw;
   margin: 10px auto;
-
+  padding: 10px;
 }
 
 form span {
   margin: 0 5px;
 }
-
+/* Attribute selector  */
 input [type="checkbox"],
 input [type="radio"]{
 transform: translateY(-3px);
@@ -133,4 +172,15 @@ transform: translateY(-3px);
 
 input [type="checkbox"]{
 margin-right: 10px;
+}
+
+.input-group {
+  margin: 20px 0;
+}
+
+.input-group--flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  color: black;
 }

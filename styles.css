@@ -112,5 +112,25 @@ cta-btn:hover {
 /*  Footer */
 footer li{
   display: inline-block;
+}
 
+/*  Contact Page form  */
+form {
+  border: solid 3px green;
+  width: 60vw;
+  margin: 10px auto;
+
+}
+
+form span {
+  margin: 0 5px;
+}
+
+input [type="checkbox"],
+input [type="radio"]{
+transform: translateY(-3px);
+}
+
+input [type="checkbox"]{
+margin-right: 10px;
 }

@@ -186,10 +186,9 @@ margin-right: 10px;
 }
 
 
-/* styles for flexible formatting */
-
-
-
+/* styles for responsive formatting */
+/* not working properly yet */
+/* needs to be refactored to not overlap previous style statement */
         footer,
         nav {
           display: flex;

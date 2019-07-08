@@ -184,3 +184,55 @@ margin-right: 10px;
   max-width: 50%;
   color: black;
 }
+
+
+/* styles for flexible formatting */
+
+
+
+        footer,
+        nav {
+          display: flex;
+          align-items: center;
+        }
+    
+        ul {
+          display: flex;
+          justify-content: space-around;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+    
+        li {
+          list-style: none;
+        }
+    
+        .container {
+          display: grid;
+          grid-template-columns: 1fr;
+    
+          grid-template-rows:
+            minmax(80px, auto) minmax(60px, auto) minmax(16px, auto) minmax(100px, auto) repeat(2, minmax(80px, auto));
+    
+          grid-gap: 1px;
+    
+          grid-template-areas:
+            'header'
+            'navigation'
+            'main'
+            'aside-1'
+            'aside-2'
+            'footer';
+    
+          height: 100vh;
+        }
+    
+        nav,
+        header,
+        main,
+        aside,
+        footer {
+          border: solid thin black;
+        }
+

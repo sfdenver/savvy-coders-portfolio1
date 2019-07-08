@@ -25,24 +25,30 @@
       list-style: none;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: 1fr;
+    @media screen and (min-width: 200px) {
+      .container {
+        /*  container border only used to assist troubleshooting  */
+        border-color: red 10px;
 
-      grid-template-rows:
-        minmax(80px, auto) minmax(60px, auto) minmax(16px, auto) minmax(100px, auto) repeat(2, minmax(80px, auto));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-      grid-gap: 1px;
+        grid-template-rows:
+          minmax(40px, auto)
+          minmax(80ps, auto)
+          repeat(2, minmax(80px, auto))
+          repeat(2, minmax(180px, auto));
 
-      grid-template-areas:
-        'header'
-        'navigation'
-        'main'
-        'aside-1'
-        'aside-2'
-        'footer';
+        grid-gap: 1px;
 
-      height: 100vh;
+        grid-template-areas:
+          'header header'
+          'navigation navigation'
+          'main aside-1'
+          'main aside-1'
+          'main aside-1'
+          'footer aside-2';
+      }
     }
 
     nav,
@@ -88,7 +94,6 @@
       background: indigo;
       color: white;
       grid-area: footer;
-    }
   </style>
 </head>
 

@@ -1,5 +1,5 @@
 # Introduction
-## Steve Field, tech exec looking for a technology refresh
+## Steve Field, tech exec getting a digital refresh
 
 - cell: 314-941-6076
 - em: steve.field@live.com

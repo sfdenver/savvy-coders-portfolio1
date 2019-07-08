@@ -225,8 +225,19 @@ margin-right: 10px;
             'footer';
     
           height: 100vh;
+
+          color: black;
+        }
+
+        main  {
+          background: cornsilk 50%;
+        }
+
+        aside {
+          background: silver;
         }
     
+        /* box border to assist troublshooting  - remove for final version */
         nav,
         header,
         main,

@@ -1,13 +1,3 @@
-const greetings = {
-    'general': 'Hello World',
-    'morning': 'Good Morning',
-    'afternoon': 'Good Afternoon'
-};
-
-// mdn query selector
-console.log(document.querySelector('h1'));
-console.log(document.querySelector('h1').textContent);
-
 // document.querySelector('h1').textContent = greetings.morning;
 
 // Create a greeter function that will use a person's name and display "Hello, name" in <h1>
@@ -24,4 +14,21 @@ console.log(document.querySelector('h1').textContent);
 const name = prompt('What is your name');
 
 console.log(name);
-// if (name = undefined) || (name = null)(
+/*
+  if (name === ''){
+
+}
+*/
+const greetings = {
+    'general': 'Hello World',
+    'morning': 'Good Morning',
+    'afternoon': 'Good Afternoon',
+    'simple': 'Hello'
+};
+
+// mdn query selector
+console.log(`Hello, ${name}`);
+// console.log(document.querySelector(`Hello, ${name}));
+/* console.log(document.querySelector('h1').textContent:`${greetings.simple}
+${name}`);
+*/

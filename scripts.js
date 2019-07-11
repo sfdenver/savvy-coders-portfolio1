@@ -28,7 +28,15 @@ const greetings = {
 
 // mdn query selector
 console.log(`Hello, ${name}`);
+
+if((name !== '')){
+    console.log('Thanks! ' + name);
+}
+ else{
+    name = prompt('What is your name, for real this time?');
+}
+// console.log(String(333.0));
+
 // console.log(document.querySelector(`Hello, ${name}));
-/* console.log(document.querySelector('h1').textContent:`${greetings.simple}
-${name}`);
-*/
+console.log(document.querySelector('h1').textContent = `Hello ${name}`);
+// comments

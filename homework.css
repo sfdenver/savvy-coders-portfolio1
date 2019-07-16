@@ -1,8 +1,15 @@
 body {
     /* set base background, colors, font family, font size */
     background-color: silver;
-    border-block-color: black;
+    border: 5px black;
     color: red;
     font-family: "Noto Sans HK", sans-serif;
     font-size: 20px;
+    padding: 50px;
+    ox-align: center;
+}
+
+h1 {
+    font-size: 40x;
+    font-weight: bolder;
 }

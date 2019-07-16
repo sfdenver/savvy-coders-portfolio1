@@ -17,20 +17,19 @@ function fizzBuzz(num){
     if(num % 3 === 0 && num % 5 === 0){
         return 'FizzBuzz';
     }
- else if(num % 3 === 0){
+    if(num % 3 === 0){
         return 'Fizz';
     }
- else if(num % 5 === 0){
+    if(num % 5 === 0){
         return 'Buzz';
     }
- else if(num % 1 === 0){
-        return 'Not divisible by 3 or 5';
-    }
+
+    return 'Not divisible by 3 or 5';
 }
 
 // Part 1 validation
 console.log('Part 1 FizzBuzz validation');
-console.log(fizzBuzz(1));
+console.log(fizzBuzz(15));
 console.log(fizzBuzz(3));
 console.log(fizzBuzz(5));
 console.log(fizzBuzz(4.1));
@@ -40,6 +39,8 @@ console.log(fizzBuzz('four'));
 console.log('Part 2 FizzBuzz in a While loop');
 let number2 = 0;
 const incr = 2;
+
+console.log(' Increment by ' + incr);
 
 while(number2 <= 60){
     console.log(number2 + '  ' + fizzBuzz(number2));

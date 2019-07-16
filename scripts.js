@@ -10,33 +10,32 @@
   3. Concatenate a string with "Hello" and User's name
   4. Select the <h1> tag on the correct page
   5. Replace the value of the <h1> tag
+
+  New requirements
+  - ask for first and last name separate
+  - display both names in Greeting
 */
-const name = prompt('What is your name');
-
-console.log(name);
+const fname = prompt('What is your first name?');
+const lname = prompt('What is your last name?');
 /*
-  if (name === ''){
-
+while(fname === '' || lname === ''){
+    const fname = prompt('What is your first name?');
+    const lname = prompt('What is your last name?');
 }
 */
-const greetings = {
-    'general': 'Hello World',
-    'morning': 'Good Morning',
-    'afternoon': 'Good Afternoon',
-    'simple': 'Hello'
-};
-
 // mdn query selector
-console.log(`Hello, ${name}`);
 
+console.log(`Hello, ${fname}, ${lname}`);
+/*
 if((name !== '')){
     console.log('Thanks! ' + name);
 }
  else{
     name = prompt('What is your name, for real this time?');
 }
+*/
 // console.log(String(333.0));
 
 // console.log(document.querySelector(`Hello, ${name}));
-console.log(document.querySelector('h1').textContent = `Hello ${name}`);
+console.log(document.querySelector('h1').innerHTML = `Hello, ${fname} ${lname}`);
 // comments

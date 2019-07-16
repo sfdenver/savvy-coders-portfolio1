@@ -1,29 +1,13 @@
-let name = prompt('What is your name?');
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
-const checkName = function(){
-    if(name === ''){
-        name = prompt('What is your name, for real this time?');
+document.querySelector('#root').innerHTML = `
+  ${Navigation}
+  ${Header}
+  ${Main}
+  ${Footer}
+`;
 
-        checkName(); // repeats until a name exists
-    }
-};
-
-checkName(); // kicks off the name-checking the first time
-
-alert('Hello ' + name);
-
-alert("Let's play a game");
-
-let gameName = prompt('What game should we play?');
-
-const whatGame = function(){
-    if(gameName === ''){
-        gameName = prompt('Its time to play a game! Pick a game now!');
-
-        whatGame(); // repeats until a name exists
-    }
-};
-
-whatGame(); // kicks off naming a game to play the first time
-
-alert('Great - we will play' + gameName);
+console.log(Navigation, Header, Main, Footer);

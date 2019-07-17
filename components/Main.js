@@ -1,4 +1,5 @@
-export default `
+export default function(state){
+    return `
 <main>
 <section>
     <h2>Section 1 Header</h2>
@@ -27,3 +28,4 @@ export default `
 
 </main>
 `;
+}

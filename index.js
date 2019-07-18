@@ -32,7 +32,8 @@ const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
 // Use i as the index of navigation items. Index runs from 0 to 1 less than number of items
 let i = 0;
-
+/*
+// assign event listener to each navigation item
 while(i < navItems.length){
     navItems[i].addEventListener('click',
         function clickHandler(event){
@@ -45,6 +46,17 @@ while(i < navItems.length){
         });
     i += 1;
 }
+*/
+
+navItems.forEach((element) => {
+    function clickHandler(event){
+        event.preventDefault();
+        render(states[event.target.textContent.toLowerCase()]);
+        // console.log('hello');
+        console.log(event.target.textContent);
+    }
+});
+
 
 // Re-render our page based on what the user clicks in our navigation menu
 /*

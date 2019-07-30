@@ -44,17 +44,18 @@ while(i < navItems.length){
 
             // console.log(i);
         });
-    i += 1;
+    i += 1
 }
 */
 
-navItems.forEach((element) => {
-    function clickHandler(event){
-        event.preventDefault();
-        render(states[event.target.textContent.toLowerCase()]);
-        // console.log('hello');
-        console.log(event.target.textContent);
-    }
+navItems.forEach((event) => {
+    event.addEventListener('click',
+        function clickHandler(event){
+            event.preventDefault();
+            render(states[event.target.textContent.toLowerCase()]);
+            // console.log('hello');
+            console.log(event.target.textContent);
+        });
 });
 
 

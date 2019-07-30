@@ -1,23 +1,24 @@
 {
-  "name": "stevefield",
-  "version": "1.0.0",
-  "description": "- cell: 314-941-6076\r - em: steve.field@live.com",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sfdenver/savvy-coders-portfolio1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sfdenver/savvy-coders-portfolio1/issues"
-  },
-  "homepage": "https://github.com/sfdenver/savvy-coders-portfolio1#readme",
-  "devDependencies": {
-    "eslint": "^6.0.1",
-    "parcel-bundler": "^1.12.3"
-  }
+    "name": "stevefield",
+    "version": "1.0.0",
+    "description": "- cell: 314-941-6076\r - em: steve.field@live.com",
+    "main": "index.js",
+    "scripts": {
+        "build": "parcel build index.html && cp _redirects ./dist/",
+        "serve": "parcel index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sfdenver/savvy-coders-portfolio1.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sfdenver/savvy-coders-portfolio1/issues"
+    },
+    "homepage": "https://github.com/sfdenver/savvy-coders-portfolio1#readme",
+    "devDependencies": {
+        "eslint": "^6.0.1",
+        "parcel-bundler": "^1.12.3"
+    }
 }

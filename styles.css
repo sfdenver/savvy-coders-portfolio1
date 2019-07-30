@@ -141,7 +141,7 @@ main section h2 {
     text-decoration: none;
     text-transform: uppercase;
     /* Normally, you should specify which properties to transition. Else, it will do all the 'transition-able' things and that could slow down the page. */
-    transition: : 0.25s;
+    transition: 0.25s;
 }
 
 .cta-btn:focus,

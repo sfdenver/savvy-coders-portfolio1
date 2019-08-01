@@ -1,16 +1,27 @@
+function linkBuilder(links){
+    // Receive an Array of 'strings' that are the names of nav links
+    // Return all the necessary <li> items
+    let listhtml = '';
+
+    links.foreach(function(link){
+        listhtml += `
+      <li>($link)</li>
+      `;
+    });
+
+    return listhtml;
+}
+
+
 export default function(state){
     return `
 <nav>
 <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="About/">About</a></li>
-    <li><a href="Contact/">Contact</a></li>
+    ${linkBuilder(state.links.primary)}
     <li class="dropdown">
         Portfolio
         <ul>
-            <li><a href="../projects/">Project 1</a></li>
-            <li><a href="">Project 2</a></li>
-            <li><a href="">Project 3</a></li>
+        ${linkBuilder(state.links.dropdown)}
         </ul>
     </li>
     <!--  Navigation to page sections and other pages-->

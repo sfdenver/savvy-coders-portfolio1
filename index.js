@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 
 const store = {
     'home': {
-        'title': 'Title Page!'
+        'title': 'Title Page!',
         'links': {
-            'primary': ['Home', 'About', 'Contact', 'Project']
-            'dropdown': ['Project 1', 'Project 2', 'Project 3']
-        }
+            'primary': [ 'Home', 'About', 'Contact', 'Project' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'page': `
         <section>
     <h2>Section 1 Header</h2>
@@ -35,27 +35,25 @@ const store = {
     <a href="#" class="cta-btn">Read More!</a>
 
 </section>
-
-
         `
     },
     'about': {
-        'title': 'About Page'
+        'title': 'About Page',
         'links': {
-            'primary': ['Home', 'About', 'Contact', 'Project']
-            'dropdown': ['Project 1', 'Project 2', 'Project 3']
-        }
+            'primary': [ 'Home', 'About', 'Contact', 'Project' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'page': `
         <h2>Finally, Main Stuff !</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam ullam cupiditate, et atque soluta eaque nobis, quasi rerum illum iusto veritatis maiores rem reiciendis quaerat minus velit, hic aspernatur. Reiciendis. </p>
         `
     },
     'contact': {
-        'title': 'Contact Page'
+        'title': 'Contact Page',
         'links': {
-            'primary': ['Home', 'About', 'Contact', 'Project']
-            'dropdown': ['Project 1', 'Project 2', 'Project 3']
-        }
+            'primary': [ 'Home', 'About', 'Contact', 'Project' ],
+            'dropdown': [ 'Project 1', 'Project 2', 'Project 3' ]
+        },
         'page': `
         <!--
         The action attribute defines where on the server the form data should be sent
@@ -126,7 +124,7 @@ const store = {
     }
 };
 
-function render(state) {
+function render(state){
     // functions are invoked to return the results for each
     document.querySelector('#root').innerHTML = `
     ${Navigation(state)}
@@ -142,9 +140,9 @@ function render(state) {
 
     const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
 
-    navItems.forEach(function eventListenerAdder(navItem) {
+    navItems.forEach(function eventListenerAdder(navItem){
         navItem.addEventListener('click',
-            function clickHandler(event) {
+            function clickHandler(event){
                 event.preventDefault();
                 console.log('click function ' + event.target.textContent);
                 render(store[event.target.textContent.toLowerCase()]);

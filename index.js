@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
-const states = {
+const store = {
     'home': {
         'title': 'Title Page!'
     },
@@ -23,22 +23,37 @@ function render(state){
     ${Main(state)}
     ${Footer(state)}
 `;
-    console.log('state came in as ', state);
-}
-render(states.home);
 
-// Navigation listeners. Elements will not exist until page is rendered.
-const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
+    console.log('state came in as ', state);
+
+    // Navigation listeners. Elements will not exist until page is rendered.
+    // event handlers are reattached each time page is rendered
+
+    const navItems = document.querySelectorAll('nav > ul > li:not(.dropdown)');
+
+    navItems.forEach(function eventListenerAdder(navItem){
+        navItem.addEventListener('click',
+            function clickHandler(event){
+                event.preventDefault();
+                console.log('click function ' + event.target.textContent);
+                render(store[event.target.textContent.toLowerCase()]);
+                // console.log('hello');
+            });
+    });
+}
+
+render(store.home);
+
 
 // Use i as the index of navigation items. Index runs from 0 to 1 less than number of items
-let i = 0;
 /*
+let i = 0;
 // assign event listener to each navigation item
 while(i < navItems.length){
     navItems[i].addEventListener('click',
         function clickHandler(event){
             event.preventDefault();
-            render(states[event.target.textContent.toLowerCase()]);
+            render(store[event.target.textContent.toLowerCase()]);
             // console.log('hello');
             console.log(event.target.textContent);
 
@@ -47,17 +62,6 @@ while(i < navItems.length){
     i += 1
 }
 */
-
-navItems.forEach((event) => {
-    event.addEventListener('click',
-        function clickHandler(event){
-            event.preventDefault();
-            render(states[event.target.textContent.toLowerCase()]);
-            // console.log('hello');
-            console.log(event.target.textContent);
-        });
-});
-
 
 // Re-render our page based on what the user clicks in our navigation menu
 /*

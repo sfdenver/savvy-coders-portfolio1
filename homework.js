@@ -12,7 +12,7 @@
 */
 
 // function declaration
-
+/* Fizz Buz
 function fizzBuzz(num){
     if(num % 3 === 0 && num % 5 === 0){
         return 'FizzBuzz';
@@ -80,3 +80,40 @@ const whatGame = function(){
 whatGame(); // kicks off naming a game to play the first time
 
 alert('Great - we will play' + gameName);
+
+*/
+
+const state = {
+    captains: ['James T. Kirk', 'Jean-Luc Picard', 'Benjamin Sisko', 'Katherine Janeway'],
+    starships: ['Enterprise', 'Voyager', 'Constellation']
+};
+
+let i = 0;
+
+// We expect the piece of state to be some type of iterable list.
+function generateListHtml(state) {
+    //   return `<li>${state}</li>`
+    let listHTML = '<ul>;
+    listHTML = states.captain.forEach(function(i) {
+            '<li>' + i + '</li>';
+        }
+
+        listHTML += '</ul>';
+        return listHTML;
+    }
+
+    // Grab the div and add a <ul> inside of it.
+    document.querySelector('div').innerHTML = '<ul></ul>';
+    document.querySelector('div ul').innerHTML += generateListHtml(i);
+
+    /*
+    while (i < state.captains.length) {
+       document.querySelector('div ul').innerHTML += generateListHtml(state.captains[i]);
+       i++;
+    }
+    */
+    /*
+    state.captains.forEach(function(i) {
+          document.querySelector('div ul').innerHTML += generateListHtml(i);
+    });
+    */

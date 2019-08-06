@@ -1,7 +1,7 @@
 export default function(state){
     return `
-<main>
- $(state.page)
-</main>
+    <main>
+      ${state.page}
+    </main>
 `;
 }

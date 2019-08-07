@@ -1,5 +1,4 @@
-export default function(state){
-    return `
+export default (state) => `
 <footer>
 <ul>
     <li>
@@ -26,4 +25,3 @@ export default function(state){
 </address>
 </footer>
 `;
-}

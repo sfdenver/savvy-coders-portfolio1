@@ -235,7 +235,7 @@ render(store.home);
 // what does .resolve do?
 
 router
-    .on(':view', function renderFromParams(params){
+    .on(':view', (params) => {
         render(store[params.view]);
     })
     .resolve();

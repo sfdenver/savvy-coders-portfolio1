@@ -4,6 +4,8 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 // import Navigo constructor function from the node 'navigo'
 import Navigo from 'navigo';
+import Axios from 'axios';
+// import { Http2SecureServer } from 'http2';
 
 const router = new Navigo(location.origin);
 
@@ -241,20 +243,33 @@ router
     .resolve();
 
 
-// Use i as the index of navigation items. Index runs from 0 to 1 less than number of items
-/*
-let i = 0;
-// assign event listener to each navigation item
-while(i < navItems.length){
-    navItems[i].addEventListener('click',
-        function clickHandler(event){
-            event.preventDefault();
-            render(store[event.target.textContent.toLowerCase()]);
-            // console.log('hello');
-            console.log(event.target.textContent);
+axios.get('https://jsonplaceholder.typicode.com/posts').then((response) => {
+    const blogPosts = response.data;
+    const blogHTML = blogPosts
+        .map(
+            (blogPost) => `
+              <section>
+              <h2>${blogPost.title}</h2>
+              <p>${blogPost.body}</p>
+              </section>
+            `
+        )
+        .join(' ');
 
-            // console.log(i);
-        });
-    i += 1
-}
+    store.blog.page = blogHTML;
+});
+
+/**
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then((response) => response.json())
+.then((response) => {
+    const blogHTML = response.map((blogPost) => `
+    <section>
+        <h2>${blogPost.title}</h2>
+        <p>${blogPost.body}</p>
+    </section>
+    `).join(' ');
+
+    store.blog.page = blogHTML;
+});
 */

@@ -86,12 +86,11 @@ header div {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: cornsilk;
     justify-content: center;
 }
 
 header {
-    height: 80vh;
+    height: 50vh;
     /*   background-image: url(https://picsum.photos/900/560?grayscale);
   background-repeat: no-repeat;
   background-position: top center;  */
@@ -101,8 +100,10 @@ header {
 
 header div {
     /* background is set at 50% transparency */
-    background: cornsilk 50%;
+    background: rgba(255, 248, 220, 0.5);
     width: 100%;
+    font-size: 15px;
+    height: 100%;
 }
 
 
@@ -197,7 +198,7 @@ input [type="checkbox"] {
 .input-group--flex {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 100%;
     color: black;
 }
 
@@ -221,11 +222,22 @@ ul {
     justify-content: space-around;
     margin: 0;
     padding: 0;
+}
+
+nav>ul {
     width: 100%;
+}
+
+footer>ul {
+    width: 75%;
 }
 
 li {
     list-style: none;
+}
+
+address {
+    font-size: 0.5em;
 }
 
 .container {
@@ -249,6 +261,8 @@ aside {
 
 /* box border to assist troublshooting  - remove for final version */
 
+
+/*
 nav,
 header,
 main,
@@ -256,3 +270,4 @@ aside,
 footer {
     border: solid thin black;
 }
+*/
